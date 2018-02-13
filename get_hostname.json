@@ -1,0 +1,9 @@
+---
+schemaVersion: '2.2'
+description: Get hostname document
+mainSteps:
+- action: aws:runShellScript
+  name: runShellScript
+  inputs:
+    runCommand:
+    - hostname

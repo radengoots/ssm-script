@@ -1,0 +1,12 @@
+---
+# Required:
+# - grep_keyword
+
+- name: Check Process Grep
+  hosts: all
+  tasks:
+  - shell: ps aux | grep {{ grep_keyword }}
+    register: ps_grep
+  - debug:
+      var: ps_grep.stdout_lines
+
